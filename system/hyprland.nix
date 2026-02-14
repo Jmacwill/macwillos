@@ -5,7 +5,8 @@
   # Enable Hyprland
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    # package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    # disabled to let it pull the nixpkgs versions
     xwayland.enable = true;
   };
 
@@ -14,16 +15,15 @@
     enable = true;
     extraPortals = [ 
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-hyprland
     ];
   };
 
   # Required system packages for Hyprland
   environment.systemPackages = with pkgs; [
     # File manager
-    xfce.thunar
-    xfce.thunar-volman  # Removable device management
-    xfce.tumbler        # Thumbnail support
+    thunar
+    thunar-volman  # Removable device management
+    tumbler        # Thumbnail support
     
     # Screenshot and screen recording
     grim                # Screenshot tool
@@ -44,7 +44,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
         user = "greeter";
       };
     };

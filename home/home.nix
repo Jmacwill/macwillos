@@ -63,8 +63,10 @@
   # Git configuration
   programs.git = {
     enable = true;
-    userName = "jmacwill";
-    userEmail = "jonathan.macwilliams@gmail.com";
+    settings = {
+      user.Name = "jmacwill";
+      user.Email = "jonathan.macwilliams@gmail.com";
+    };
   };
 
   # Bash configuration

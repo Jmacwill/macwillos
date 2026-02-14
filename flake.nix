@@ -25,14 +25,6 @@
 
     # Define your machines here
     machines = {
-      # First machine
-      desktop = {
-        hostname = "desktop";
-        username = "yourname";
-        timezone = "America/New_York";
-      };
-
-      # Second machine (example)
       nixtop = {
         hostname = "nixtop";
         username = "jonathan";
