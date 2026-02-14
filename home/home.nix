@@ -21,8 +21,8 @@
     eza
     
     # Fonts for Waybar
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    
+    nerd-fonts.jetbrains-mono
+
     # Basic tools
     firefox
   ];
