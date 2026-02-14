@@ -1,0 +1,10 @@
+# See what Hyprland config is being used
+cat ~/.config/hypr/hyprland.conf
+
+# Check if waybar is running
+ps aux | grep waybar
+
+# Try starting waybar manually to see errors
+killall waybar 2>/dev/null
+waybar 
+

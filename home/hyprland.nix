@@ -75,11 +75,11 @@
         preserve_split = true;
       };
       
-      # Window rules
-      windowrulev2 = [
-        "float,class:^(pavucontrol)$"
-        "float,class:^(thunar)$,title:^(File Operation Progress)$"
-      ];
+      # Window rules  (commented out do to change in systax)
+      # windowrulev2 = [
+      #  "float,class:^(pavucontrol)$"
+      #  "float,class:^(thunar)$,title:^(File Operation Progress)$"
+      # ];
       
       # Keybindings
       bind = [

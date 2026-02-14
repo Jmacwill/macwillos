@@ -1,0 +1,12 @@
+❯ sudo nixos-rebuild switch --flake .#nixtop
+[sudo] password for jonathan: 
+building the system configuration...
+evaluation warning: The xorg package set has been deprecated, 'xorg.libXcursor' has been renamed to 'libxcursor'
+evaluation warning: The xorg package set has been deprecated, 'xorg.libxcb' has been renamed to 'libxcb'
+evaluation warning: The xorg package set has been deprecated, 'xorg.libXdmcp' has been renamed to 'libxdmcp'
+evaluation warning: The xorg package set has been deprecated, 'xorg.xcbutilerrors' has been renamed to 'libxcb-errors'
+evaluation warning: The xorg package set has been deprecated, 'xorg.xcbutilrenderutil' has been renamed to 'libxcb-render-util'
+evaluation warning: The xorg package set has been deprecated, 'xorg.xcbutilwm' has been renamed to 'libxcb-wm'
+Checking switch inhibitors... done
+stopping the following units: audit.service, avahi-daemon.service, avahi-daemon.socket, bluetooth.service, cups-browsed.service, cups.service, cups.socket, docker.service, docker.socket, home-jonathan-externalNetworkDrives-NAS.automount, kmod-static-nodes.service, libvirt-guests.service, libvirtd-admin.socket, libvirtd-ro.socket, libvirtd.service, libvirtd.socket, logrotate-checkconf.service, mount-pstore.service, network-setup.service, NetworkManager-wait-online.service, NetworkManager.service, nfs-client.target, nfs-idmapd.service, nfs-mountd.service, nfs-server.service, nfsdcld.service, nh-clean.timer, nscd.service, plymouth-quit-wait.service, plymouth-quit.service, plymouth-read-write.service, proc-fs-nfsd.mount, proc-sys-fs-binfmt_misc.automount, proc-sys-fs-binfmt_misc.mount, resolvconf.service, rpc-statd-notify.service, rpc-statd.service, rpc_pipefs.target, rpcbind.service, rpcbind.socket, rtkit-daemon.service, smartd.service, sshd.service, system-cups.slice, systemd-ask-password-plymouth.path, systemd-ask-password-plymouth.service, systemd-binfmt.service, systemd-machined.service, systemd-modules-load.service, systemd-oomd.service, systemd-oomd.socket, systemd-sysctl.service, systemd-timesyncd.service, systemd-udev-trigger.service, systemd-vconsole-setup.service, tailscaled.service, var-lib-nfs-rpc_pipefs.mount, virt-guest-shutdown.target, virtlockd.socket, virtlogd.socket
+
