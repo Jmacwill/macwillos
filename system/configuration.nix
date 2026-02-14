@@ -14,17 +14,10 @@
   time.timeZone = machineConfig.timezone;
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable Hyprland
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-  };
-
-  # XDG portal for screen sharing, etc.
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
+  # Import Hyprland module
+  imports = [
+    ./hyprland.nix
+  ];
 
   # Sound
   security.rtkit.enable = true;
@@ -38,7 +31,7 @@
   # User account - automatically uses the machine's username
   users.users.${machineConfig.username} = {
     isNormalUser = true;
-    description = "Your Name";
+    description = "Jonathan";
     extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
   };
 
@@ -47,7 +40,6 @@
     wget
     git
     neovim
-    brave
   ];
 
   # Enable flakes

@@ -18,20 +18,10 @@
       fsType = "ext4";
     };
 
-  fileSystems."/home/jonathan/externalNetworkDrives/NAS" =
-    { device = "systemd-1";
-      fsType = "autofs";
-    };
-
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/8EA4-48AD";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
-    };
-
-  fileSystems."/home/jonathan/externalNetworkDrives/NAS" =
-    { device = "100.101.227.116:/mnt/Main_Core/Core_1";
-      fsType = "nfs4";
     };
 
   swapDevices = [ ];
@@ -41,8 +31,6 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.docker0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.tailscale0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp3s0f4u2.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

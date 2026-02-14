@@ -9,9 +9,11 @@ A portable, modular NixOS setup with Hyprland and Home Manager that works across
 ├── flake.nix                    # Main entry point - EDIT MACHINES HERE
 ├── flake.lock                   # Locked dependency versions
 ├── system/
-│   └── configuration.nix        # Shared system settings
+│   ├── configuration.nix        # Shared system settings
+│   └── hyprland.nix            # Hyprland system configuration
 ├── home/
-│   └── home.nix                 # Shared user settings
+│   ├── home.nix                # Shared user settings
+│   └── hyprland.nix            # Hyprland user configuration
 └── hosts/
     ├── desktop/
     │   └── hardware-configuration.nix
@@ -151,6 +153,38 @@ nix flake update # Update all dependencies
 ✅ **Easy to add machines** - Just add to the list and generate hardware config  
 ✅ **Shared configs** - Common settings in one place  
 ✅ **Git-friendly** - Each machine's hardware config in its own folder  
+
+## Hyprland Configuration
+
+Hyprland is now fully configured with:
+
+**System level** (`system/hyprland.nix`):
+- Thunar file manager with all required plugins
+- Screenshot tools (grim, slurp)
+- Brightness and media controls
+- Auto-login via greetd
+- All necessary system packages
+
+**User level** (`home/hyprland.nix`):
+- Complete Hyprland configuration with keybindings
+- Waybar status bar with system info
+- Wofi app launcher
+- Auto-start applications
+
+**Default Keybindings:**
+- `SUPER + RETURN` - Open terminal (kitty)
+- `SUPER + D` - App launcher (wofi)
+- `SUPER + E` - File manager (thunar)
+- `SUPER + Q` - Close window
+- `SUPER + M` - Exit Hyprland
+- `SUPER + F` - Fullscreen
+- `SUPER + 1-9` - Switch workspace
+- `SUPER + SHIFT + 1-9` - Move window to workspace
+- `Print` - Screenshot selection
+- `SHIFT + Print` - Screenshot full screen
+- Arrow keys for window focus/movement
+
+Edit `home/hyprland.nix` to customize keybindings, appearance, and behavior!
 
 ## Next Steps
 

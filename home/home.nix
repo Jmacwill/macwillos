@@ -7,6 +7,11 @@
   home.homeDirectory = "/home/${machineConfig.username}";
   home.stateVersion = "24.05";
 
+  # Import Hyprland configuration
+  imports = [
+    ./hyprland.nix
+  ];
+
   # User packages
   home.packages = with pkgs; [
     # Terminal utilities
@@ -15,15 +20,11 @@
     fd
     eza
     
-    # Hyprland essentials
-    waybar          # Status bar
-    wofi            # App launcher
-    kitty           # Terminal emulator
-    dunst           # Notifications
+    # Fonts for Waybar
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     
     # Basic tools
     firefox
-    pavucontrol     # Audio control
   ];
 
   # Neovim configuration
