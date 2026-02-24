@@ -44,15 +44,15 @@
       # Decorations
       decoration = {
         rounding = 8;
-        blur = {
-          enabled = true;
-          size = 3;
-          passes = 1;
-        };
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
+#        blur = {
+#          enabled = true;
+#          size = 3;
+#          passes = 1;
+#        };
+#        "drop.shadow" = true;
+#        "shadow.range" = 4;
+#        shadow_render_power = 3;
+#        "col.shadow" = "rgba(1a1a1aee)";
       };
       
       # Animations
@@ -87,7 +87,8 @@
         "$mod, RETURN, exec, kitty"
         "$mod, D, exec, wofi --show drun"
         "$mod, E, exec, thunar"
-        
+        "$mod, W, exec, brave"
+
         # Window management
         "$mod, Q, killactive"
         "$mod, M, exit"

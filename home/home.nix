@@ -20,11 +20,15 @@
     fd
     eza
     
+    # Add Kitty here
+    kitty
+
     # Fonts for Waybar
     nerd-fonts.jetbrains-mono
 
     # Basic tools
     firefox
+    brave
   ];
 
   # Neovim configuration
