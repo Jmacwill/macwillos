@@ -3,12 +3,13 @@
 
 {
   # Enable Hyprland
-  programs.hyprland = {
-    enable = true;
+  #programs.hyprland = {
+  #  enable = true;
+  #  withUWSM = true;
     # package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     # disabled to let it pull the nixpkgs versions
-    xwayland.enable = true;
-  };
+  #  xwayland.enable = true;
+#  };
 
   # XDG portal for screen sharing, file picking, etc.
   xdg.portal = {
@@ -43,8 +44,12 @@
   services.greetd = {
     enable = true;
     settings = {
+    #  initial_session = {
+    #    command = "${pkgs.hyprland}/bin/Hyprland";
+    #    user = "jonathan";
+    #  };
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd start-hyprland --user-menu";
         user = "greeter";
       };
     };
