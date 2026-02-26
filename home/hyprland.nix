@@ -50,11 +50,11 @@
       # Decorations
       decoration = {
         rounding = 8;
-#        blur = {
-#          enabled = true;
-#          size = 3;
-#          passes = 1;
-#        };
+        blur = {
+          enabled = true;
+          size = 3;
+          passes = 1;
+        };
 #        "drop.shadow" = true;
 #        "shadow.range" = 4;
 #        shadow_render_power = 3;

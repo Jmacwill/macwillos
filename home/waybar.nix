@@ -47,7 +47,7 @@
     style = ''
       * {
         font-family: "JetBrainsMono Nerd Font";
-        font-size: 13px;
+        font-size: 15px;
       }
       
       window#waybar {

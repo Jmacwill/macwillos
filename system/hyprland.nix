@@ -16,9 +16,26 @@
     enable = true;
     extraPortals = [ 
       pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-hyprland
     ];
+    configPackages = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-hyprland
+    ];
+    config = {
+      common = {
+        default = [ "hyprland" "gtk" ];
+      };
+      hyprland = {
+        default = [ "hyprland" "gtk" ];
+        "org.freedesktop.impl.portal.ScreenCast" = [ "hyprland" ];
+      };
+    }; 
   };
 
+  # Link to Portal Paths
+  environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
+  
   # Required system packages for Hyprland
   environment.systemPackages = with pkgs; [
     # File manager
