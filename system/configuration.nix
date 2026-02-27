@@ -48,13 +48,6 @@
   # Allow unfree packages (if needed)
   nixpkgs.config.allowUnfree = true;
 
-  # setup QtGreet for Wayland
-#  services.greetd.enable = true;
-
- # programs.qtgreet = {
-#  enabled = true;
- #   package = inputs.qtgreet.packages.${pkgs.system}.qtgreet;
- # };
   # This value determines the NixOS release
   system.stateVersion = "24.05"; # Don't change this!
 }

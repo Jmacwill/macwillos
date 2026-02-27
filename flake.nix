@@ -10,11 +10,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-#    qtgreet = {
-#      url = "github:derekagraham78/nixos";
-#      inputs.nixpkgs.follows = "nixpkgs";
-#    };
-
     hyprland.url = "github:hyprwm/Hyprland";
   };
 

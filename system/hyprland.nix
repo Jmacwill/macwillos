@@ -2,15 +2,6 @@
 { config, pkgs, inputs, ... }:
 
 {
-  # Enable Hyprland
-  #programs.hyprland = {
-  #  enable = true;
-  #  withUWSM = true;
-    # package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    # disabled to let it pull the nixpkgs versions
-  #  xwayland.enable = true;
-#  };
-
   # XDG portal for screen sharing, file picking, etc.
   xdg.portal = {
     enable = true;
