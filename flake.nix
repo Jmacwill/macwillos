@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+#    qtgreet = {
+#      url = "github:derekagraham78/nixos";
+#      inputs.nixpkgs.follows = "nixpkgs";
+#    };
+
     hyprland.url = "github:hyprwm/Hyprland";
   };
 
@@ -18,6 +23,7 @@
     nixpkgs,
     home-manager,
     hyprland,
+#    qtgreet,
     ...
   } @ inputs: let
     # CONFIGURATION - Change these values for each machine!

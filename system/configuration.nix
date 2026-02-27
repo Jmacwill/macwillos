@@ -48,9 +48,13 @@
   # Allow unfree packages (if needed)
   nixpkgs.config.allowUnfree = true;
 
-  # Link paths for portals and applications
-  # environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
+  # setup QtGreet for Wayland
+#  services.greetd.enable = true;
 
+ # programs.qtgreet = {
+#  enabled = true;
+ #   package = inputs.qtgreet.packages.${pkgs.system}.qtgreet;
+ # };
   # This value determines the NixOS release
   system.stateVersion = "24.05"; # Don't change this!
 }
