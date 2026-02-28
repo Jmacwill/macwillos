@@ -26,6 +26,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
   };
 
   # User account - automatically uses the machine's username
@@ -40,6 +41,8 @@
     wget
     git
     neovim
+    pamixer # sound control software
+    pwvucontrol #volume control software
   ];
 
   # Enable flakes

@@ -15,10 +15,11 @@
   # User packages
   home.packages = with pkgs; [
     # Terminal utilities
-    htop
-    ripgrep
-    fd
-    eza
+    htop      # cpu monitor
+    ripgrep   # faster version of grep
+    fd        # better file finder
+    eza       # EZA is a replacement for ls 
+    psmisc    # adds killall, pstree etc.
     
     # Add Kitty here
     kitty
