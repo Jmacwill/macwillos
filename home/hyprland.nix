@@ -11,6 +11,15 @@
   # Hyprland configuration
   wayland.windowManager.hyprland = {
     enable = true;
+
+    # windows rules
+    extraConfig = ''
+      windowrule = float on, match:class com.saivert.pwvucontrol
+      windowrule = size 800 600, match:class com.saivert.pwvucontrol
+      windowrule = pin on, match:class com.saivert.pwvucontrol
+      windowrule = float on, match:class thunar
+      '';
+
     settings = {
       # Modifier key (Mod4 = Super/Windows key)
       "$mod" = "SUPER";
@@ -82,10 +91,10 @@
       };
       
       # Window rules  (commented out do to change in systax)
-      # windowrulev2 = [
-      #  "float,class:^(pavucontrol)$"
-      #  "float,class:^(thunar)$,title:^(File Operation Progress)$"
-      # ];
+   #   windowrule = [
+   #     "float,class:^(pwvucontrol)$"
+   #     "float,class:^(thunar)$"
+   #    ];
       
       # Keybindings
       bind = [
