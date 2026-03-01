@@ -45,10 +45,10 @@
         };
         modules = [
           # Hardware config specific to this machine
-          ./hosts/${name}/hardware-configuration.nix
+          ./hosts/${name}
 
           # Shared system configuration
-          ./system/configuration.nix
+          ./modules/system
 
           # Hyprland module
           hyprland.nixosModules.default
@@ -58,7 +58,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${config.username} = import ./home/home.nix;
+            home-manager.users.${config.username} = import ./modules/home;
             home-manager.extraSpecialArgs = {
               inherit inputs;
               machineConfig = config;
