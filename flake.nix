@@ -12,8 +12,6 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
-    gruvbox-wallpapers.url = "github:AngelJumbo/gruvbox-wallpapers";
-    
   };
 
   outputs = {

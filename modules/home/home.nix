@@ -21,6 +21,11 @@
 
     # Basic tools
     brave     #Brave Browser
+    discord
+    
+    #coding tools
+    vscode
+    nixfmt
   ];
 
   # Let Home Manager manage itself
