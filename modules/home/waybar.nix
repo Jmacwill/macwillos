@@ -1,5 +1,5 @@
 # modules/home/waybar.nix - Waybar in Dracula Pro
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   programs.waybar = {

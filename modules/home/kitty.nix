@@ -1,5 +1,5 @@
 # modules/home/kitty.nix - Kitty terminal in Dracula Pro
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   programs.kitty = {

@@ -1,5 +1,5 @@
 # modules/home/neovim.nix - Neovim with Dracula theme
-{ config, pkgs, inputs, machineConfig, ... }:
+{ pkgs, ... }:
 
 {
   programs.neovim = {

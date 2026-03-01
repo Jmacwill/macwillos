@@ -1,5 +1,5 @@
 # /modules/home/git.nix - User-level configuration with Home Manager
-{ config, pkgs, inputs, machineConfig, ... }:
+{ ... }:
 
 {
 

@@ -1,3 +1,20 @@
+
 {
-    "nix.formatterPath": "nixfmt"
+  "nix.serverPath": "nixd",
+  "nix.enableLanguageServer": true,
+  "nix.serverSettings": {
+    "nixd": {
+      "formatting": {
+        "command": [ "nixfmt" ], // or nixfmt or nixpkgs-fmt
+      },
+      // "options": {
+      //    "nixos": {
+      //   "expr": "(builtins.getFlake \"/PATH/TO/FLAKE\").nixosConfigurations.CONFIGNAME.options"
+      //    },
+      //    "home_manager": {
+      //      "expr": "(builtins.getFlake \"/PATH/TO/FLAKE\").homeConfigurations.CONFIGNAME.options"
+      //    },
+      // },
+    }
+  }
 }

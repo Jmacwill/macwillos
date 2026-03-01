@@ -1,5 +1,5 @@
 # /modules/home/bash.nix - User-level configuration with Home Manager
-{ config, pkgs, inputs, machineConfig, ... }:
+{ machineConfig, ... }:
 
 {
   # Bash configuration

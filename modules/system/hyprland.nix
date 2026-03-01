@@ -1,7 +1,7 @@
 # modules/system/hyprland.nix - System-level Hyprland configuration
 # Handles portals, display manager, polkit — things that need root/system access
 # User-facing Hyprland config (keybinds, appearance) lives in home/hyprland/
-{ config, pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   # XDG desktop portals — enable screen sharing, file picking, etc. for Wayland apps

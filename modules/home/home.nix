@@ -1,5 +1,5 @@
 # /modules/home/home.nix - User-level configuration with Home Manager
-{ config, pkgs, inputs, machineConfig, ... }:
+{ pkgs, inputs, machineConfig, ... }:
 
 {
   # Automatically uses the machine's username
@@ -26,8 +26,15 @@
     #coding tools
     vscode
     nixfmt
+    nixd
   ];
 
   # Let Home Manager manage itself
   programs.home-manager.enable = true;
+
+  # setup path for nixpkgs
+
+  nix.nixPath = [
+    "nixpkgs=${inputs.nixpkgs}"
+  ];
 }

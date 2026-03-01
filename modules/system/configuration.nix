@@ -1,5 +1,5 @@
 # modules/system/configuration.nix - System-level configuration
-{ config, pkgs, inputs, machineConfig, ... }:
+{ pkgs, machineConfig, ... }:
 
 {
   # Bootloader

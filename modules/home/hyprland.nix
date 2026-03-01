@@ -1,5 +1,5 @@
 # modules/home/hyprland.nix - Hyprland user configuration via Home Manager
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 # ─── Dracula Pro Colour Palette ───────────────────────────────────────────────
 # bg       #22212C   current  #3A3652   fg       #F8F8F2
