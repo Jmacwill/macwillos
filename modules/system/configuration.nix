@@ -10,14 +10,12 @@
   networking.hostName = machineConfig.hostname;
   networking.networkmanager.enable = true;
 
+  # Enable Tailscale
+  services.tailscale.enable = true;
+
   # Time zone - automatically uses the machine's timezone
   time.timeZone = machineConfig.timezone;
   i18n.defaultLocale = "en_US.UTF-8";
-
-  # Import Hyprland module
-  imports = [
-    ./hyprland.nix
-  ];
 
   # Sound
   security.rtkit.enable = true;

@@ -1,11 +1,11 @@
-# home/hyprland.nix - Hyprland user configuration via Home Manager
+# modules/home/hyprland.nix - Hyprland user configuration via Home Manager
 { config, pkgs, ... }:
 
 {
   # Imports
 
   imports = [
-    ./waybar.nix
+    ./waybar.nix  # import Waybar here to prevent it getting imported unless Hyprland is enabled
   ];
 
   # Hyprland configuration
@@ -89,12 +89,6 @@
         pseudotile = true;
         preserve_split = true;
       };
-      
-      # Window rules  (commented out do to change in systax)
-   #   windowrule = [
-   #     "float,class:^(pwvucontrol)$"
-   #     "float,class:^(thunar)$"
-   #    ];
       
       # Keybindings
       bind = [
