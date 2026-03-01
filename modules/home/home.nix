@@ -26,18 +26,6 @@
     brave     #Brave Browser
   ];
 
-
-  # Bash configuration
-  programs.bash = {
-    enable = true;
-    shellAliases = {
-      ll = "eza -la";
-      # Rebuild automatically detects which machine you're on
-      rebuild = "sudo nixos-rebuild switch --flake .#${machineConfig.hostname}";
-      update = "nix flake update";
-    };
-  };
-
   # Let Home Manager manage itself
   programs.home-manager.enable = true;
 }
