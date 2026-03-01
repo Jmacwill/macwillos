@@ -49,6 +49,9 @@
 
     # Network management tray applet
     networkmanagerapplet
+
+    # Hyprland Wallpaper packages
+    hyprpaper
   ];
 
   # Display manager: tuigreet shows a TUI login prompt, then launches Hyprland

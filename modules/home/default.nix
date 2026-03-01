@@ -8,5 +8,6 @@
     ./neovim.nix
     ./git.nix
     ./bash.nix
+    ./kitty.nix
   ];
 }

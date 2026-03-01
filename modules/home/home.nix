@@ -16,9 +16,6 @@
     eza       # EZA is a replacement for ls 
     psmisc    # adds killall, pstree etc.
     
-    # Add Kitty here
-    kitty     # Terminal Program
-
     # Fonts for Waybar
     nerd-fonts.jetbrains-mono
 

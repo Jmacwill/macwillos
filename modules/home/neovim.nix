@@ -1,38 +1,29 @@
-# modules/home/neovim.nix - neovim configuration
+# modules/home/neovim.nix - Neovim with Dracula theme
 { config, pkgs, inputs, machineConfig, ... }:
 
-{ 
- # Neovim configuration
- 
- programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-    
-    # Basic plugins to get started
+{
+  programs.neovim = {
+    enable = true; defaultEditor = true; viAlias = true; vimAlias = true;
+
     plugins = with pkgs.vimPlugins; [
-      vim-nix         # Nix syntax highlighting
-      nvim-treesitter # Better syntax highlighting
+      vim-nix
+      nvim-treesitter
+      dracula-nvim
     ];
-    
+
     extraConfig = ''
-      " Basic settings
-      set number
-      set relativenumber
-      set tabstop=2
-      set shiftwidth=2
-      set expandtab
-      set smartindent
-      
-      " Enable mouse
+      set termguicolors
+      colorscheme dracula
+
+      " Transparent background so Kitty blur shows through
+      highlight Normal     guibg=NONE ctermbg=NONE
+      highlight NormalNC   guibg=NONE ctermbg=NONE
+      highlight SignColumn guibg=NONE ctermbg=NONE
+
+      set number relativenumber
+      set tabstop=2 shiftwidth=2 expandtab smartindent
       set mouse=a
-      
-      " Better search
-      set ignorecase
-      set smartcase
-      set hlsearch
-      set incsearch
+      set ignorecase smartcase hlsearch incsearch
     '';
   };
 }
