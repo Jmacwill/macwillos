@@ -1,4 +1,4 @@
-# system/hyprland.nix - System-level Hyprland configuration
+# modules/system/hyprland.nix - System-level Hyprland configuration
 # Handles portals, display manager, polkit — things that need root/system access
 # User-facing Hyprland config (keybinds, appearance) lives in home/hyprland/
 { config, pkgs, inputs, ... }:

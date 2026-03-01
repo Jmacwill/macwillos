@@ -4,5 +4,9 @@
 {
   imports = [
     ./home.nix
+    ./hyprland.nix
+    ./neovim.nix
+    ./git.nix
+    ./bash.nix
   ];
 }

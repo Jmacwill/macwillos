@@ -1,4 +1,4 @@
-# system/configuration.nix - System-level configuration
+# modules/system/configuration.nix - System-level configuration
 { config, pkgs, inputs, machineConfig, ... }:
 
 {

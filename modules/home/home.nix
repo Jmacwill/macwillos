@@ -1,4 +1,4 @@
-# home/home.nix - User-level configuration with Home Manager
+# /modules/home/home.nix - User-level configuration with Home Manager
 { config, pkgs, inputs, machineConfig, ... }:
 
 {
@@ -6,11 +6,6 @@
   home.username = machineConfig.username;
   home.homeDirectory = "/home/${machineConfig.username}";
   home.stateVersion = "24.05";
-
-  # Import Hyprland configuration
-  imports = [
-    ./hyprland.nix
-  ];
 
   # User packages
   home.packages = with pkgs; [
@@ -22,57 +17,15 @@
     psmisc    # adds killall, pstree etc.
     
     # Add Kitty here
-    kitty
+    kitty     # Terminal Program
 
     # Fonts for Waybar
     nerd-fonts.jetbrains-mono
 
     # Basic tools
-    firefox
-    brave
+    brave     #Brave Browser
   ];
 
-  # Neovim configuration
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-    
-    # Basic plugins to get started
-    plugins = with pkgs.vimPlugins; [
-      vim-nix         # Nix syntax highlighting
-      nvim-treesitter # Better syntax highlighting
-    ];
-    
-    extraConfig = ''
-      " Basic settings
-      set number
-      set relativenumber
-      set tabstop=2
-      set shiftwidth=2
-      set expandtab
-      set smartindent
-      
-      " Enable mouse
-      set mouse=a
-      
-      " Better search
-      set ignorecase
-      set smartcase
-      set hlsearch
-      set incsearch
-    '';
-  };
-
-  # Git configuration
-  programs.git = {
-    enable = true;
-    settings = {
-      user.Name = "jmacwill";
-      user.Email = "jonathan.macwilliams@gmail.com";
-    };
-  };
 
   # Bash configuration
   programs.bash = {
