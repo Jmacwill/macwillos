@@ -93,7 +93,7 @@
 
       bind = [
         "$mod, RETURN, exec, kitty"
-        "$mod, D, exec, wofi --show drun"
+        "$mod, D, exec, discord"
         "$mod, C, exec, code"
         "$mod, E, exec, thunar"
         "$mod, W, exec, brave"
