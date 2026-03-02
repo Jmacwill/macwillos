@@ -32,6 +32,7 @@
     vscode
     nixfmt
     nixd
+    python3 
   ];
 
   # Let Home Manager manage itself

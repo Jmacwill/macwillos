@@ -31,7 +31,7 @@
   users.users.${machineConfig.username} = {
     isNormalUser = true;
     description = "Jonathan";
-    extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "audio" "dailout" ];
   };
 
   # System-wide packages
