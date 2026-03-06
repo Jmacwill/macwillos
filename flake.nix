@@ -12,6 +12,18 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.noctalia-qs.follows = "noctalia-qs";
+    };
+
+    noctalia-qs = {
+      url = "github:noctalia-dev/noctalia-qs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    }
+
   };
 
   outputs = {
@@ -19,7 +31,6 @@
     nixpkgs,
     home-manager,
     hyprland,
-#    qtgreet,
     ...
   } @ inputs: let
     # CONFIGURATION - Change these values for each machine!
@@ -53,6 +64,10 @@
 
           # Hyprland module
           hyprland.nixosModules.default
+
+          # noctalia
+          inputs.noctalia.homeModules.default
+      ];
 
           # Home Manager integration
           home-manager.nixosModules.home-manager
