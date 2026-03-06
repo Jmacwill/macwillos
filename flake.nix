@@ -67,9 +67,6 @@
             # Hyprland module
             hyprland.nixosModules.default
 
-            # noctalia
-            inputs.noctalia.homeModules.default
-
             # Home Manager integration
             home-manager.nixosModules.home-manager
             {
