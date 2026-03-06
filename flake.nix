@@ -22,7 +22,6 @@
       url = "github:noctalia-dev/noctalia-qs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    }
 
   };
 
@@ -67,10 +66,10 @@
 
           # noctalia
           inputs.noctalia.homeModules.default
-      ];
+      
 
           # Home Manager integration
-          home-manager.nixosModules.home-manager
+          home-manager.nixosModules.home-manager 
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

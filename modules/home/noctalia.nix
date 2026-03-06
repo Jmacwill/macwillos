@@ -1,6 +1,6 @@
 # /modules/home/noctalia.nix - User-level configuration with Home Manager
 
-{ pkgs, inputs, ... }:
+{ inputs, ... }:
 
 {
   home-manager.users.drfoobar = {
