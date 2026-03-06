@@ -3,7 +3,7 @@
 { inputs, ... }:
 
 {
-  home-manager.users.drfoobar = {
+  home-manager.users.jonathan = {
     # import the home manager module
     imports = [
       inputs.noctalia.homeModules.default

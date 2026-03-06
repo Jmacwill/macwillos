@@ -1,0 +1,10 @@
+# /system/noctalia.nix - System-level configuration for Noctalia Shell
+
+{ pkgs, inputs, ... }:
+{
+  # install package
+  environment.systemPackages = with pkgs; [
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # ... maybe other stuff
+  ];
+}
