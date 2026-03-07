@@ -20,6 +20,7 @@
     fd # better file finder
     eza # EZA is a replacement for ls
     psmisc # adds killall, pstree etc.
+    fastfetch
 
     # Fonts for Waybar
     nerd-fonts.jetbrains-mono
