@@ -10,6 +10,6 @@
     ./git.nix
     ./bash.nix
     ./kitty.nix
-    #./noctalia.nix
+    ./noctalia.nix
   ];
 }

@@ -10,6 +10,11 @@
   networking.hostName = machineConfig.hostname;
   networking.networkmanager.enable = true;
 
+  #Hardware support
+  hardware.bluetooth.enable = true;
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
+
   # Enable Tailscale
   services.tailscale.enable = true;
 

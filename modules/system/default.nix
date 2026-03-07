@@ -6,6 +6,6 @@
     ./configuration.nix
     ./hyprland.nix
     ./nfs.nix
-    #./noctalia.nix
+    ./noctalia.nix
   ];
 }
