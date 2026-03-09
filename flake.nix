@@ -70,12 +70,15 @@
             # Home Manager integration
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.${config.username} = import ./modules/home;
-              home-manager.extraSpecialArgs = {
-                inherit inputs;
-                machineConfig = config;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.${config.username} = import ./modules/home;
+                backupFileExtension = "backup"; #This triggers a backup on ever switch, which is nice for testing
+                extraSpecialArgs = {
+                  inherit inputs;
+                  machineConfig = config;
+                };
               };
             }
           ];

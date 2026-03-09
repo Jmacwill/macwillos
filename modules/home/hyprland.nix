@@ -25,7 +25,7 @@
       monitor = [ ",preferred,auto,1" ];
 
       exec-once = [
-        "waybar"
+       # "waybar"
         "dunst"
         "${pkgs.networkmanagerapplet}/bin/nm-applet"
       ];
