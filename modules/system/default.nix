@@ -7,5 +7,6 @@
     ./hyprland.nix
     ./nfs.nix
     ./noctalia.nix
+    ./programming.nix
   ];
 }
