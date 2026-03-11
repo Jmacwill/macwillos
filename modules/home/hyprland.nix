@@ -28,6 +28,7 @@
        # "waybar"
         "dunst"
         "${pkgs.networkmanagerapplet}/bin/nm-applet"
+        "noctalia-shell"
       ];
 
       input = {

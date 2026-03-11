@@ -34,6 +34,9 @@
     nixfmt
     nixd
     python3 
+
+    # optional tools
+    gnucash
   ];
 
   # Let Home Manager manage itself
