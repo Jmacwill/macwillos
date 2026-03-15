@@ -74,9 +74,6 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 users.${config.username} = import ./modules/home;
-                #users.${config.username} = {
-                #  xdg.configFile.".config/hypr/hyprland.conf.backup".force = true;
-                #};
                 backupFileExtension = "backup"; #This triggers a backup on ever switch, which is nice for testing
                 extraSpecialArgs = {
                   inherit inputs;

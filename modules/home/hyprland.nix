@@ -8,7 +8,7 @@
 # ─────────────────────────────────────────────────────────────────────────────
 
 {
-  imports = [ ./waybar.nix ];
+  #imports = [ ./waybar.nix ];  #not used anymore
 
   wayland.windowManager.hyprland = {
     enable = true;

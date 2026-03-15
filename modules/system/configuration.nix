@@ -14,6 +14,8 @@
   hardware.bluetooth.enable = true;
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
+  services.xserver.layout = "us";
+  services.xserver.xkbVariant = "nodeadkeys";   
 
   # Enable Tailscale
   services.tailscale.enable = true;
