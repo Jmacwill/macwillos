@@ -37,6 +37,8 @@
 
     # optional tools
     gnucash
+
+    # funshit
   ];
 
   # Let Home Manager manage itself
