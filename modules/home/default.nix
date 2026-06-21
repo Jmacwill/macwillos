@@ -11,6 +11,6 @@
     ./bash.nix
     ./kitty.nix
     ./noctalia.nix
-#    ./steam.nix
+    ./steam.nix
   ];
 }
